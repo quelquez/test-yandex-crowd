@@ -19,6 +19,7 @@
   --container-color: hsl(0, 0%, 100%);
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(255, 20%, 10%);
+  --yellow-color: hsl(44, 96,65,100%);
   --gray-border: hsl(255, 6%, 90%);
   --black-border: hsl(255, 10%, 20%);
 
@@ -28,7 +29,7 @@
   --body-font: "Montserrat", sans-serif;
   --second-font: "Golos Text", sans-serif;
   --third-font: "Merriweather", serif;
-  --big-font-size: 2.25rem;
+  --big-font-size: 33,875rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -133,30 +134,92 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header{
+  position:absolute;
+  width: 17.9%;
+  top: 36px;
+  left: 100px;
+  z-index: var(--z-fixed);
+}
 
+/* For mobile devices */
+@media screen and (max-width: 1150px){
+  
+}
 
-/* Navigation for mobile devices */
+/*=============== HERO ===============*/
+.hero{
+  background-image: url("../img/bg.png");
+  background-size: cover;
+}
 
+ .hero__container{
+  position: relative;
+  row-gap: 3rem;
+  padding-block: 2.5rem 6rem;
+}
 
-/* Show menu */
+.hero__content{
+  row-gap: 2.5rem;
+}
 
+.hero__data{
+  text-align: center;
+} 
 
-/* Change background header */
+.hero__title{
+  font-family: var(--third-font);
+  color: var(--black-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-regular);
+  margin-bottom: 1rem;
+}
 
+.hero_description{
+  margin-bottom: 2.5rem;
+  color: var(--black-color);
+}
 
-/* Active link */
-
-
-/*=============== HOME ===============*/
-
+.hero__buttons{
+  display: flex;
+}
 
 /*=============== BUTTON ===============*/
+.button{
+  background-color: transparent;
+  color: black;
+  display: inline-flex;
+  font-weight: var(--font-semi-bold);
+  padding: 20px 49px;
+  border-radius: 66px;
+  transition: box-shadow .4s;
+}
 
+.button:hover{
+  background-color: black;
+  color: white;
+}
 
-/*=============== ABOUT ===============*/
+/* .black{
+  background-color: black;
+  color: white;
+}
 
+.black:hover{
+  background: var(--yellow-color);
+  color: black;
+}
 
-/*=============== STAGES ===============*/
+.trans{
+  background-color: black;
+  color: white;
+}
+
+.trans:hover{
+  background: var(--black-color);
+  color: white;
+} */
+
 
 
 /* Swiper class */
@@ -185,3 +248,21 @@ img {
 
 
 /* For large devices */
+
+/* Animation */
+/* @keyframes assemble {
+  0% {
+      transform: translate(-100%, -100%);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}
+
+img {
+  animation: assemble 1s forwards;
+} */
