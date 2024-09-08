@@ -3,8 +3,6 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
-
   /*============= Colors ======================*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --title-color: var(--black-color);
@@ -30,15 +28,9 @@
   --footer-color: hsl(29, 32%, 87%);
 
   /*============= Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   
   --title-font: "Merriweather", serif;
   --body-font:"Golos Text", sans-serif;
-  --big-font-size: 33,875rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
 
   /*============= Font weight ==================*/
   --font-regular: 400;
@@ -49,18 +41,6 @@
   /*============= z index ======================*/
   --z-tooltip: 10;
   --z-fixed: 100;
-}
-
-/*============== Responsive typography =========*/
-@media screen and (min-width: 1150px) {
-  :root {
-    --big-font-size: 3.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-  }
 }
 
 /*================ BASE ===================*/
@@ -75,21 +55,10 @@ html {
 }
 
 body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--title-font);
-  font-weight: var(--font-regular);
-  color: var(--title-color);
-  text-transform: uppercase;
-}
-
-ul {
-  list-style: none;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -102,137 +71,166 @@ img {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
-.container {
-  margin-inline: 1.5rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.main {
-  overflow: hidden;
-}
-
-/*=============== HEADER & NAV ===============*/
+/*=============== HEADER ===============*/
 .header{
-  position:absolute;
   width: 100%;
-  top: 0px;
-  left: 0px;
+  max-width: 1366px;
+  min-width: 375px;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
   z-index: var(--z-fixed);
 }
 
 .header__logo{
-  position:absolute;
-  width: 17.9%;
-  top: 36px;
-  left: 100px;
+  width: 245px;
+  height: 36;
 }
 
-/* For mobile devices */
-@media screen and (max-width: 1150px){
-  
-}
+/*=============== MAIN ===============*/
 
-/*=============== HERO ===============*/
-.hero{
-  position: relative;
-  height: 102.3vh;
+.main {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 375px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-image: url("../img/bg.png");
-  background-size: cover;
-  background-position: -24.2rem;
+  background-size: 1920px 700px;
+  background-repeat: no-repeat;
+  background-position-x:70%;
 }
 
-.hero__container{
-  position: relative;
-  justify-content: flex-start;
-  padding: 5rem;
+.intro {
+  padding: 26px 72px;
+  max-width: 1366px;
+  width: 100%;
+  height: 700px;
 }
 
-/* .hero__content{
-  margin-top: 5rem;
-} */
+/*=============== main container ===============*/
 
-.hero__data{
-  text-align: center;
-} 
-
-.hero__title{
-  font-size: var(--big-font-size);
+.intro_container{
+  width: 542px;
+  margin-top: 62px;
+  display: flex;
+  flex-direction: column;
   text-align: left;
   margin-bottom: 1rem;
 }
 
-.hero_description{
-  font-size: var(--font-medium);
-  color: var(--black-color);
-  margin-bottom: 2.5rem;
+.title{
+  font-family: var(--title-font);;
+  font-size: 60px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 110%;
 }
 
-.hero__buttons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+.subtitle{
+  font-family: var(--body-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: center;
+  margin-top: 24px;
 }
 
-/*=============== BUTTON ===============*/
-.button{
+/*=============== BUTTONS ===============*/
+
+.buttons_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.button_link{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 5rem;
+  padding: 20px;
   border-radius: 66px;
-  background: var(--black-color);
-  color: var(--white-color);
+  border-width: 0px;
   font-weight: var(--font-semi-bold);
   transition: background-color 0.3s ease;
-  width: 330px;
-  height: 90px;
+  width: 263px;
+  height: 72px;
 }
 
-.button:hover{
+.button_text{
+  font-family: 'Golos Text';
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  width: 165px;
+}
+
+.button_bg{
+  background-color: var(--black-btn-color);
+  color: var(--white-color);
+}
+
+.button_bg:hover{
   background-color: var(--yellow-color);
   color: var(--black-color);
 }
 
-.button__price{
-  border: 2px solid var(--black-color);
-  background: transparent;
+.button_bg_trans{
+  background-color: transparent;
   color: var(--black-color);
+  border: 2px solid var(--black-border);
 }
 
-.button__price:hover{
-  background-color: var(--black-color);
+.button_bg_trans:hover{
+  background-color: var(--black-btn-color);
   color: var(--white-color);
 }
 
-/* Swiper class */
+/*=============== RUNNING LINE ===============*/
 
+.running_line{
+  background-color: var(--red-color);
+  height: 60px;
+  width: 100%;
+  font-family: var(--title-font);
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: var(--white-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
-/*=============== PARTICIPANTS ===============*/
+.line_content{
+  animation: marquee 10s linear infinite;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
 
+.circle {
+  width: 6px;
+  height: 6px;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 12px 0 12px;
+}
 
-/*=============== FOOTER ===============*/
-
-
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up */
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

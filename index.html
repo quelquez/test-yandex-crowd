@@ -1,100 +1,133 @@
 <!DOCTYPE html>
-   <html lang="ru">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!--=============== FAVICON ==================-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!--=============== FAVICON ==================-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
 
-      <!--=============== REMIXICONS ====================-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <!--=============== CSS ======================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="">
+    <title>Клуб четырех коней - Тестовый лендинг</title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <!--==================== MAIN ========================-->
+    <main class="main">
+      <!--==================== INTRO ====================-->
+      <section class="intro">
+         <div class="header" id="header">
+            <a href="#" class="header__logo">
+              <img src="assets/img/logo.png" alt="logo" />
+            </a>
+          </div>
+        <div class="intro_container">
+          <div class="title">Превратите уездный город</div>
+          <div class="title" style="text-align: center">
+            в столицу земного шара
+          </div>
+          <div class="subtitle">
+            Оплатите взнос на телеграммы для организации Международного
+            васюкинского турнира по шахматам
+          </div>
+          <div class="buttons_container">
+            <a href="#announcement" class="button_link button_bg">
+              <div class="button_text">Поддержать шахматную мысль</div>
+            </a>
+            <a href="#price" class="button_link button_bg_trans">
+              <div class="button_text">
+                Подробнее <br />
+                о турнире
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
-      <!--=============== CSS ======================-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+      <!--==================== RUNNING LINE ====================-->
+      <div class="running_line">
+        <div class="line_content">
+          Дело помощи утопающим — дело рук самих утопающих!
+          <div class="circle"></div>
+          Шахматы двигают вперед не только культуру, но и экономику!
+          <div class="circle"></div>
+          Лед тронулся, господа присяжные заседатели!
+          <div class="circle"></div>
+        </div>
 
-      <title>Клуб четырех коней - Тестовый лендинг</title>
-   </head>
-   <body>
-      <!--==================== HEADER ======================-->
-      <header class="header" id="header">
-         <a href="#" class="header__logo">
-            <img src="assets/img/logo.png" alt="logo">
-         </a>
-      </header>
+        <div class="line_content">
+          Дело помощи утопающим — дело рук самих утопающих!
+          <div class="circle"></div>
+          Шахматы двигают вперед не только культуру, но и экономику!
+          <div class="circle"></div>
+          Лед тронулся, господа присяжные заседатели!
+          <div class="circle"></div>
+        </div>
 
-      <!--==================== MAIN ========================-->
-      <main class="main">
+        <div class="line_content">
+          Дело помощи утопающим — дело рук самих утопающих!
+          <div class="circle"></div>
+          Шахматы двигают вперед не только культуру, но и экономику!
+          <div class="circle"></div>
+          Лед тронулся, господа присяжные заседатели!
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <!--==================== ANNOUNCEMENT ====================-->
+      <section class="announcement_section" id="announcement"></section>
+
+      <!--==================== PRICE ====================-->
+      <section class="price_section" id="price"></section>
+
+      <!--==================== STAGES ====================-->
+      <section class="stages_section" id="stages"></section>
+
+      <!--================ PARTICIPANTS ==================-->
+      <section class="participants_section" id="participants"></section>
+
+      <!--==================== RUNNING LINE ====================-->
+      <!-- <div class="running_line">
+      <div class="line_content">
+         Дело помощи утопающим — дело рук самих утопающих!
+         <div class="circle"></div>
+         Шахматы двигают вперед не только культуру, но и экономику!
+         <div class="circle"></div>
+         Лед тронулся, господа присяжные заседатели!
+         <div class="circle"></div>
+      </div>
       
-         <!--==================== HERO ====================-->
-         <section class="hero section" id="hero">
-            <div class="hero__container container grid">
-               <div class="hero__content grid">
-                  <div class="hero__data">
-                     <div class="hero__title">
-                        <h1>
-                           <span class="title-left">Превратите <br> уездный город</span>
-                           <span class="title-center">в столицу <br> земного шара</span>
-                        </h1>
-                     </div>
-                     <p class="hero__description">
-                        Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
-                     </p>
-                     <div class="hero__buttons">
-                        <a href="#announcement" class="button"> Поддержать шахматную мысль</a>
-                        <a href="#price" class="button button__price"> Подробнее о турнире
-                          </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+      <div class="line_content">
+         Дело помощи утопающим — дело рук самих утопающих!
+         <div class="circle"></div>
+         Шахматы двигают вперед не только культуру, но и экономику!
+         <div class="circle"></div>
+         Лед тронулся, господа присяжные заседатели!
+         <div class="circle"></div>
+      </div>
 
-         <!--==================== SCROLLING IMAGE ====================-->
+      <div class="line_content">
+         Дело помощи утопающим — дело рук самих утопающих!
+         <div class="circle"></div>
+         Шахматы двигают вперед не только культуру, но и экономику!
+         <div class="circle"></div>
+         Лед тронулся, господа присяжные заседатели!
+         <div class="circle"></div>
+      </div>
+   </div> -->
+    </main>
 
-         <!--==================== ANNOUNCEMENT ====================-->
-         <section class="announcement section" id="announcement">
+    <!--=============== FOOTER =====================-->
+    <footer class="footer"></footer>
 
-         </section>
-
-         <!--==================== PRICE ====================-->
-         <section class="price section" id="price">
-
-         </section>
-
-         <!--==================== STAGES ====================-->
-         <section class="stages section" id="stages">
-
-         </section>
-
-         <!--================ PARTICIPANTS ==================-->
-         <section class="participants section" id="participants">
-
-         </section>
-
-         <!--==================== SCROLLING IMAGE ====================-->
-
-
-      </main>
-
-      <!--=============== FOOTER =====================-->
-      <footer class="footer">
-
-      </footer>
-
-      <!--=============== SCROLL UP ==================-->
-
-
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
-
-      <!--=============== SWIPER JS ==================-->
-      <script src=""></script>
-
-      <!--=============== MAIN JS ====================-->
-      <script src="assets/js/main.js"></script>
-   </body>
+    <!--=============== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
