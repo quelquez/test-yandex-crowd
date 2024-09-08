@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather&family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -7,32 +7,36 @@
 
   /*============= Colors ======================*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(18, 95%, 55%);
-  --second-color: hsl(42, 98%, 52%);
-  --first-gradient: linear-gradient(90deg,
-                  hsl(18, 95%, 55%),
-                  hsl(18, 98%, 64%));
-  --title-color: hsl(255, 12%, 12%);
-  --text-color: hsl(225, 12%, 24%);
-  --text-color-light: hsl(255, 4%, 70%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 100%);
+  --title-color: var(--black-color);
+  --text-color: var(--black-color);
+  --text-color-light: var(--red-color);
+  --body-color: var(--white-color);
+  
   --white-color: hsl(0, 0%, 100%);
-  --black-color: hsl(255, 20%, 10%);
-  --yellow-color: hsl(44, 96,65,100%);
-  --gray-border: hsl(255, 6%, 90%);
-  --black-border: hsl(255, 10%, 20%);
+  --red-color: hsl(7, 91%, 58%);
+  --yellow-color: hsl(44, 96%, 65%);
+  --black-color: hsl(0, 0%, 19%);
+
+  --black-btn-color: hsl(0, 0%, 12%);
+  --blue-color: hsl(219, 54%, 41%);
+  --black-border: var(--black-btn-color);
+  --blue-border: var(--blue-color);
+
+  --gray-grid: hsl(0, 0%, 82%);
+  --gray-text-grid: hsl(0, 0%, 44%);
+  --gray-count: hsl(0, 0%, 51%);
+  --gray-disabled: hsl(0, 0%, 84%);
+  --footer-text: hsl(30, 3%, 46%);
+  --footer-color: hsl(29, 32%, 87%);
 
   /*============= Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   
-  --body-font: "Montserrat", sans-serif;
-  --second-font: "Golos Text", sans-serif;
-  --third-font: "Merriweather", serif;
+  --title-font: "Merriweather", serif;
+  --body-font:"Golos Text", sans-serif;
   --big-font-size: 33,875rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
 
@@ -78,8 +82,10 @@ body {
 }
 
 h1, h2, h3, h4 {
+  font-family: var(--title-font);
+  font-weight: var(--font-regular);
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
 }
 
 ul {
@@ -98,35 +104,12 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
   margin-inline: 1.5rem;
 }
 
 .grid {
   display: grid;
   gap: 1.5rem;
-}
-
-.section {
-  padding-block: 5rem 1rem;
-}
-.section__title, 
-.section__subtitle {
-  text-align: center;
-}
-
-.section__title {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-bold);
-  margin-bottom: 1.5rem;
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi-bold);
-  color: var(--second-color);
-  margin-bottom: .5rem;
 }
 
 .main {
@@ -136,10 +119,17 @@ img {
 /*=============== HEADER & NAV ===============*/
 .header{
   position:absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: var(--z-fixed);
+}
+
+.header__logo{
+  position:absolute;
   width: 17.9%;
   top: 36px;
   left: 100px;
-  z-index: var(--z-fixed);
 }
 
 /* For mobile devices */
@@ -149,78 +139,76 @@ img {
 
 /*=============== HERO ===============*/
 .hero{
+  position: relative;
+  height: 102.3vh;
   background-image: url("../img/bg.png");
   background-size: cover;
+  background-position: -24.2rem;
 }
 
- .hero__container{
+.hero__container{
   position: relative;
-  row-gap: 3rem;
-  padding-block: 2.5rem 6rem;
+  justify-content: flex-start;
+  padding: 5rem;
 }
 
-.hero__content{
-  row-gap: 2.5rem;
-}
+/* .hero__content{
+  margin-top: 5rem;
+} */
 
 .hero__data{
   text-align: center;
 } 
 
 .hero__title{
-  font-family: var(--third-font);
-  color: var(--black-color);
   font-size: var(--big-font-size);
-  font-weight: var(--font-regular);
+  text-align: left;
   margin-bottom: 1rem;
 }
 
 .hero_description{
-  margin-bottom: 2.5rem;
+  font-size: var(--font-medium);
   color: var(--black-color);
+  margin-bottom: 2.5rem;
 }
 
 .hero__buttons{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /*=============== BUTTON ===============*/
 .button{
-  background-color: transparent;
-  color: black;
-  display: inline-flex;
-  font-weight: var(--font-semi-bold);
-  padding: 20px 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5rem;
   border-radius: 66px;
-  transition: box-shadow .4s;
+  background: var(--black-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  transition: background-color 0.3s ease;
+  width: 330px;
+  height: 90px;
 }
 
 .button:hover{
-  background-color: black;
-  color: white;
+  background-color: var(--yellow-color);
+  color: var(--black-color);
 }
 
-/* .black{
-  background-color: black;
-  color: white;
+.button__price{
+  border: 2px solid var(--black-color);
+  background: transparent;
+  color: var(--black-color);
 }
 
-.black:hover{
-  background: var(--yellow-color);
-  color: black;
+.button__price:hover{
+  background-color: var(--black-color);
+  color: var(--white-color);
 }
-
-.trans{
-  background-color: black;
-  color: white;
-}
-
-.trans:hover{
-  background: var(--black-color);
-  color: white;
-} */
-
-
 
 /* Swiper class */
 
@@ -248,21 +236,3 @@ img {
 
 
 /* For large devices */
-
-/* Animation */
-/* @keyframes assemble {
-  0% {
-      transform: translate(-100%, -100%);
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-  }
-  100% {
-      transform: translate(0, 0);
-  }
-}
-
-img {
-  animation: assemble 1s forwards;
-} */
