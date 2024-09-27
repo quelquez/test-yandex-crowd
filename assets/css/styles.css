@@ -9,7 +9,7 @@
   --text-color: var(--black-color);
   --text-color-light: var(--red-color);
   --body-color: var(--white-color);
-  
+
   --white-color: hsl(0, 0%, 100%);
   --red-color: hsl(7, 91%, 58%);
   --yellow-color: hsl(44, 96%, 65%);
@@ -28,9 +28,9 @@
   --footer-color: hsl(29, 32%, 87%);
 
   /*============= Font and typography ==========*/
-  
+
   --title-font: "Merriweather", serif;
-  --body-font:"Golos Text", sans-serif;
+  --body-font: "Golos Text", sans-serif;
 
   /*============= Font weight ==================*/
   --font-regular: 400;
@@ -71,7 +71,7 @@ img {
   height: auto;
 }
 
-h1{
+h1 {
   font-size: 60px;
   line-height: 66px;
   font-family: var(--title-font);
@@ -80,7 +80,7 @@ h1{
   text-transform: uppercase;
 }
 
-h2{
+h2 {
   font-size: 54px;
   line-height: 64px;
   font-family: var(--title-font);
@@ -89,7 +89,7 @@ h2{
   text-transform: uppercase;
 }
 
-h3{
+h3 {
   font-size: 36px;
   line-height: 48px;
   font-family: var(--title-font);
@@ -99,7 +99,7 @@ h3{
 }
 
 /*=============== HEADER ===============*/
-.header{
+.header {
   width: 100%;
   max-width: 1366px;
   min-width: 375px;
@@ -109,9 +109,9 @@ h3{
   z-index: var(--z-fixed);
 }
 
-.header__logo{
+.header__logo {
   width: 245px;
-  height: 36;
+  height: 36px;
 }
 
 /*=============== MAIN ===============*/
@@ -127,8 +127,10 @@ h3{
   background-image: url("../img/bg.png");
   background-size: 1920px 700px;
   background-repeat: no-repeat;
-  background-position-x:70%;
+  background-position-x: 50%;
 }
+
+/*=============== INTRO ===============*/
 
 .intro {
   padding: 26px 72px;
@@ -137,9 +139,7 @@ h3{
   height: 700px;
 }
 
-/*=============== main container ===============*/
-
-.intro_container{
+.intro_data {
   width: 542px;
   margin-top: 62px;
   display: flex;
@@ -148,7 +148,7 @@ h3{
   margin-bottom: 1rem;
 }
 
-.description{
+.intro_description {
   font-family: var(--body-font);
   font-size: 18px;
   font-weight: 400;
@@ -157,16 +157,16 @@ h3{
   margin-top: 24px;
 }
 
-/*=============== BUTTONS ===============*/
+/*=============== INTRO BUTTONS ===============*/
 
-.buttons_container{
+.intro_buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 40px;
 }
 
-.button_link{
+.button_link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,8 +179,8 @@ h3{
   height: 72px;
 }
 
-.button_text{
-  font-family: 'Golos Text';
+.button_text {
+  font-family: "Golos Text";
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -188,30 +188,30 @@ h3{
   width: 165px;
 }
 
-.button_bg{
+.button_bg {
   background-color: var(--black-btn-color);
   color: var(--white-color);
 }
 
-.button_bg:hover{
+.button_bg:hover {
   background-color: var(--yellow-color);
   color: var(--black-color);
 }
 
-.button_bg_trans{
+.button_bg_tran {
   background-color: transparent;
   color: var(--black-color);
   border: 2px solid var(--black-border);
 }
 
-.button_bg_trans:hover{
+.button_bg_tran:hover {
   background-color: var(--black-btn-color);
   color: var(--white-color);
 }
 
 /*=============== RUNNING LINE ===============*/
 
-.running_line{
+.running_line {
   background-color: var(--red-color);
   height: 60px;
   width: 100%;
@@ -228,7 +228,7 @@ h3{
   overflow: hidden;
 }
 
-.line_content{
+.line_content {
   animation: marquee 10s linear infinite;
   display: inline-flex;
   flex-direction: row;
@@ -254,45 +254,121 @@ h3{
   }
 }
 
-/*=============== ANNOUNCEMENT ===============*/
+/*=============== SUPPORT ===============*/
 
-.announcement_section{
+.support_section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 80px;
   padding: 0px 72px;
-  
   max-width: 1366px;
   width: 100%;
   height: 250px;
   align-items: center;
 }
 
-.announce_text{
-  max-width: 764px;
+.support_text {
   max-height: 195px;
+  max-width: 764px;
 }
 
-.announce_image{
-  max-width: 394px;
-  max-height: 250px;
+.support_image {
+  position: relative;
+  width: 394px;
+  height: auto;
 }
 
-/*=============== PRICE ===============*/
-.price_section{
+.support_image img {
+  width: 394px;
+  height: 250px;
+  object-fit: cover;
+  max-width: none;
+}
+
+/*=============== ABOUT ===============*/
+.about_section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 64px;
   padding: 0px 72px;
   max-width: 1366px;
+  max-height: 527px;
   width: 100%;
-  height: 250px;
   align-items: center;
 }
 
-.price_text{
+.about_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 44px;
+}
+
+.about_image {
+  position: relative;
+  width: 400px;
+  height: auto;
+}
+
+.about_image img {
+  width: 609px;
+  height: 528px;
+  object-fit: cover;
+  margin-left: -50px;
+  max-width: none;
+}
+
+.about_data {
+  max-height: 527px;
   max-width: 704px;
-  max-height: 147px;
+}
+
+.about_table {
+  font-family: var(--body-font);
+  font-size: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  margin: 20px 0;
+}
+
+.about_table td {
+  padding: 10px 10px;
+  vertical-align: top;
+  border: none;
+}
+
+.about_table td + td {
+  border-left: 1px solid var(--gray-grid);
+}
+
+.about_table tr + tr td {
+  border-top: 1px solid var(--gray-grid);
+}
+
+.about_table td:first-child {
+  color: var(--gray-text-grid);
+  font-size: var(--font-regular);
+  padding-left: 0;
+}
+
+.about_table td:last-child {
+  color: var(--black-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.old_price {
+  color: var(--red-color);
+}
+
+.old_price::before {
+  color: var(--black-color);
+  content: "100 руб.";
+}
+
+.about_container {
+  color: var(--blue-color);
+  font-family: var(--body-font);
+  font-size: 20px;
 }
