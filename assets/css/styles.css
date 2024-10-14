@@ -91,7 +91,7 @@ h2 {
 
 h3 {
   font-size: 36px;
-  line-height: 48px;
+  line-height: 48.6px;
   font-family: var(--title-font);
   font-weight: var(--font-regular);
   color: var(--title-color);
@@ -291,37 +291,50 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
   margin-top: 64px;
   padding: 0px 72px;
   max-width: 1366px;
   max-height: 527px;
   width: 100%;
   align-items: center;
+  overflow: visible;
 }
 
 .about_container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto 1fr;
   gap: 44px;
 }
 
 .about_image {
   position: relative;
-  width: 400px;
-  height: auto;
+  overflow: visible;
+  width: 474px;
+  height: 527px;
 }
 
 .about_image img {
-  width: 609px;
-  height: 528px;
+  position: absolute;
   object-fit: cover;
-  margin-left: -50px;
   max-width: none;
+  height: auto;
+  width: 528px;
+
+  top: -47px;
+  right: -27px;
+  bottom: -35px;
+  left: -27px;
 }
 
 .about_data {
   max-height: 527px;
   max-width: 704px;
+  overflow: visible;
+}
+
+.about_table_container {
+  margin-top: 60px;
 }
 
 .about_table {
@@ -330,27 +343,35 @@ h3 {
   width: 100%;
   border-collapse: collapse;
   border: none;
-  margin: 20px 0;
 }
 
 .about_table td {
-  padding: 10px 10px;
+  padding: 15px 15px;
   vertical-align: top;
   border: none;
-}
+  }
 
 .about_table td + td {
-  border-left: 1px solid var(--gray-grid);
+  border-left: 2px solid var(--gray-grid);
 }
 
 .about_table tr + tr td {
-  border-top: 1px solid var(--gray-grid);
+  border-top: 2px solid var(--gray-grid);
+}
+
+.about_table tr:first-child td {
+  padding-top: 0;
+}
+
+.about_table tr:last-child td{
+  padding-bottom: 0;
 }
 
 .about_table td:first-child {
   color: var(--gray-text-grid);
   font-size: var(--font-regular);
-  padding-left: 0;
+  padding-left: 0px;
+  width: 306px;
 }
 
 .about_table td:last-child {
@@ -367,7 +388,8 @@ h3 {
   content: "100 руб.";
 }
 
-.about_container {
+.about_description {
+  margin-top: 48px;
   color: var(--blue-color);
   font-family: var(--body-font);
   font-size: 20px;
